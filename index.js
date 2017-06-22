@@ -31,7 +31,7 @@ module.exports = function buildAlibabaPreset(context, options) {
 			// https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-dynamic-import
 			require('babel-plugin-syntax-dynamic-import'),
 			require('babel-plugin-transform-class-properties'),
-			[require('babel-plugin-transform-runtime'), {helpers: false, polyfill: false, regenerator: true }]
+			[require('babel-plugin-transform-runtime'), {helpers: false, polyfill: false, regenerator: true }],
 
 			[require('babel-plugin-transform-es2015-template-literals'), { spec: true }],
 			require('babel-plugin-transform-es3-member-expression-literals'),
