@@ -1,5 +1,5 @@
 {
-  "name": "babel-preset-alibaba",
+  "name": "@alibaba.ir/babel-preset-alibaba",
   "version": "0.0.0",
   "description": "A babel preset for transforming your JavaScript for Alibaba.ir",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/alibaba-ir/babel-preset-alibaba.git"
   },
-  "author": "Ali Torki <a.torki@alibaba.ir>",
+  "author": "Ali Torki",
   "bugs": {
     "url": "https://github.com/alibaba-ir/babel-preset-alibaba/issues"
   },
@@ -22,7 +22,6 @@
     "es7",
     "babel-presets"
   ],
-  "author": "Ali Torki",
   "license": "Apache-2.0",
   "devDependencies": {
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
@@ -44,5 +43,6 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1"
-  }
+  },
+  "dependencies": {}
 }
