@@ -1,6 +1,6 @@
 {
   "name": "@alibaba.ir/babel-preset-alibaba",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "A babel preset for transforming your JavaScript for Alibaba.ir",
   "main": "index.js",
   "repository": {
