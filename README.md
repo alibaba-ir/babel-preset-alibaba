@@ -3,11 +3,17 @@
 > A babel preset for transforming your JavaScript for Alibaba.ir.
 
 Currently contains transforms for all standard syntax that is [stage 4](https://tc39.github.io/ecma262/) (ES2017) or [stage 3](https://github.com/tc39/proposals#active-proposals), except for the following:
+
  - generators: `regenerator-runtime` is too heavyweight for our use.
  - Compile the new function bind operator `::` to ES5.
  - Turn JSX into React function calls.
  - Compile class and object decorators to ES5.
  - Syntax Dynamic Import. Allow parsing of `import()`. [source](https://babeljs.io/docs/plugins/syntax-dynamic-import/)
+ - Babel React Optimize in Production Mode:
+ 1. [transform-react-constant-elements](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-constant-elements)
+ 2. [transform-react-inline-elements](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-inline-elements)
+ 3. [transform-react-remove-prop-types](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types)
+ 4. [transform-react-pure-class-to-function](https://github.com/thejameskyle/babel-react-optimize/tree/master/packages/babel-plugin-transform-react-pure-class-to-function)
  - `async/await`: `regenerator-runtime` is too heavyweight for our use, and [async-to-promises](https://www.npmjs.com/package/babel-plugin-async-to-promises) is not yet complete enough to be safely used.
  - `SIMD`: this is a performance feature, so is pretty pointless to polyfill/transpile.
  - lifted template literal restrictions: we do not use tagged template literals, nor implement custom DSLs, otherwise we would enable this.
