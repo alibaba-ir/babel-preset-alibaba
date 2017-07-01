@@ -22,6 +22,16 @@ module.exports = function buildAlibabaPreset(context, options) {
 			require('babel-preset-es2017'),
 			require('babel-preset-react'),
 		],
+		env: {
+			"production": {
+				"plugins": [
+					require('babel-plugin-transform-react-constant-elements'),
+					require('babel-plugin-transform-react-inline-elements'),
+					require('babel-plugin-transform-react-remove-prop-types')['default'],
+					require('babel-plugin-transform-react-pure-class-to-function')
+				]
+			}
+		},
 		plugins: [
 			[require('babel-plugin-transform-react-jsx'), { useBuiltIns: true }],
 			[require('babel-plugin-transform-react-jsx-source')],
